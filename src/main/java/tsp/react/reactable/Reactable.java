@@ -3,20 +3,12 @@ package tsp.react.reactable;
 import org.bukkit.NamespacedKey;
 import tsp.react.React;
 
-public class Reactable {
+public interface Reactable {
 
-    private final NamespacedKey key;
+    NamespacedKey getKey();
 
-    public Reactable(NamespacedKey key) {
-        this.key = key;
-    }
-
-    public void register(React react) {
+    default void register(React react) {
         react.getManager().register(this);
-    }
-
-    public NamespacedKey getKey() {
-        return key;
     }
 
 }
