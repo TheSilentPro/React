@@ -1,0 +1,11 @@
+name: ${project.name}
+description: <!> TEST-PLUGIN <!>
+
+main: tsp.react.React
+version: ${project.version}
+api-version: 1.19
+
+commands:
+  test:
+    usage: /test
+    description: Test Command for React
